@@ -1,0 +1,94 @@
+<!doctype html>
+document.getElementById('results').innerHTML='';
+document.getElementById('map-wrap').innerHTML='';
+setStatus('Belum memilih barang');
+});
+
+
+document.getElementById('search').addEventListener('click', runSearch);
+document.getElementById('q').addEventListener('keydown', (e)=>{
+if(e.key==='Enter') runSearch();
+});
+
+
+async function runSearch(){
+const q = document.getElementById('q').value.trim();
+if(!q) return alert('Masukkan nama atau kode barang dulu.');
+
+
+setStatus('Mencari...');
+const results = await apiSearch(q);
+renderResults(results);
+
+
+if(results.length===0){
+setStatus('Tidak ada hasil');
+} else {
+setStatus('Pilih barang untuk melihat denah');
+}
+}
+
+
+function renderResults(results){
+const box = document.getElementById('results');
+box.innerHTML='';
+
+
+if(results.length===0){
+box.appendChild(el('div', {class:'result'}, 'Tidak ada barang yang cocok.'));
+return;
+}
+
+
+results.forEach(item => {
+const loc = item.location;
+const locText = loc ? loc.code : 'LOKASI BELUM DIISI';
+
+
+const card = el('div', {class:'result'});
+const top = el('div', {class:'result-top'});
+
+
+const left = el('div');
+left.appendChild(el('div', {class:'result-title'}, `${item.name}`));
+left.appendChild(el('div', {class:'result-sub'}, `Kode: <b>${item.sku}</b> • Kategori: ${item.category || '-'} • Qty: ${item.qty ?? 0}`));
+left.appendChild(el('div', {class:'result-sub'}, `Lokasi Rak: <b>${locText}</b>`));
+
+
+const right = el('div');
+const btn = el('button', {}, 'Lihat di Denah');
+btn.addEventListener('click', async ()=>{
+await openItemOnMap(item.id);
+});
+right.appendChild(btn);
+
+
+top.appendChild(left);
+top.appendChild(right);
+card.appendChild(top);
+box.appendChild(card);
+});
+}
+
+
+async function openItemOnMap(itemId){
+setStatus('Memuat denah...');
+
+
+const item = await apiGet('/api/item/' + encodeURIComponent(itemId));
+const mapData = await apiGet('/api/map/' + MAP_ID);
+
+
+const highlightRackId = item.location ? item.location.id : null;
+await showMap(mapData.map, mapData.racks, highlightRackId);
+
+
+if(!highlightRackId){
+setStatus('Barang ditemukan, tetapi lokasi rak belum diisi');
+} else {
+setStatus('Rak ditandai: ' + item.location.code);
+}
+}
+
+
+async fu
