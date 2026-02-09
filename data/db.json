@@ -1,0 +1,101 @@
+{
+  "company": "PT Granitoguna Building Ceramics",
+  "warehouse": {
+    "name": "Gudang Sparepart Utama",
+    "mapId": "warehouse"
+  },
+
+  "racks": [
+    { "id": "R-A01", "code": "A01", "x": 180, "y": 140 },
+    { "id": "R-A02", "code": "A02", "x": 300, "y": 140 },
+    { "id": "R-A03", "code": "A03", "x": 420, "y": 140 },
+    { "id": "R-A04", "code": "A04", "x": 540, "y": 140 },
+
+    { "id": "R-B01", "code": "B01", "x": 180, "y": 260 },
+    { "id": "R-B02", "code": "B02", "x": 300, "y": 260 },
+    { "id": "R-B03", "code": "B03", "x": 420, "y": 260 },
+    { "id": "R-B04", "code": "B04", "x": 540, "y": 260 },
+
+    { "id": "R-C01", "code": "C01", "x": 180, "y": 380 },
+    { "id": "R-C02", "code": "C02", "x": 300, "y": 380 },
+    { "id": "R-C03", "code": "C03", "x": 420, "y": 380 },
+    { "id": "R-C04", "code": "C04", "x": 540, "y": 380 }
+  ],
+
+  "items": [
+    {
+      "id": "ITM-0001",
+      "name": "Bearing 6203",
+      "code": "SP-6203",
+      "rackId": "R-A01"
+    },
+    {
+      "id": "ITM-0002",
+      "name": "Bearing 6204",
+      "code": "SP-6204",
+      "rackId": "R-A02"
+    },
+    {
+      "id": "ITM-0003",
+      "name": "Fan Belt Motor",
+      "code": "SP-FB001",
+      "rackId": "R-A03"
+    },
+    {
+      "id": "ITM-0004",
+      "name": "V-Belt A-54",
+      "code": "SP-VB054",
+      "rackId": "R-A04"
+    },
+
+    {
+      "id": "ITM-0005",
+      "name": "Sensor Proximity M12",
+      "code": "SP-SN012",
+      "rackId": "R-B01"
+    },
+    {
+      "id": "ITM-0006",
+      "name": "Limit Switch Omron",
+      "code": "SP-LS001",
+      "rackId": "R-B02"
+    },
+    {
+      "id": "ITM-0007",
+      "name": "Relay 24V DC",
+      "code": "SP-RL024",
+      "rackId": "R-B03"
+    },
+    {
+      "id": "ITM-0008",
+      "name": "MCB 10A 1 Phase",
+      "code": "SP-MCB10",
+      "rackId": "R-B04"
+    },
+
+    {
+      "id": "ITM-0009",
+      "name": "Seal Mechanical Pump",
+      "code": "SP-SEAL01",
+      "rackId": "R-C01"
+    },
+    {
+      "id": "ITM-0010",
+      "name": "O-Ring 25mm",
+      "code": "SP-OR025",
+      "rackId": "R-C02"
+    },
+    {
+      "id": "ITM-0011",
+      "name": "Grease Cartridge",
+      "code": "SP-GRS001",
+      "rackId": "R-C03"
+    },
+    {
+      "id": "ITM-0012",
+      "name": "Oil Hydraulic ISO 46",
+      "code": "SP-OIL046",
+      "rackId": "R-C04"
+    }
+  ]
+}
