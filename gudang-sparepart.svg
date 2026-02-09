@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1000" id="gudang-sparepart">
+<rect x="0" y="0" width="2000" height="1000" fill="#f6f6f6" stroke="#ddd" />
+
+
+<text x="70" y="70" font-size="38" fill="#111">Gudang Sparepart - PT Granitoguna</text>
+
+
+<!-- jalur/aisle -->
+<rect x="70" y="120" width="1860" height="140" fill="#ffffff" stroke="#cfcfcf" />
+<rect x="70" y="300" width="1860" height="140" fill="#ffffff" stroke="#cfcfcf" />
+<rect x="70" y="480" width="1860" height="140" fill="#ffffff" stroke="#cfcfcf" />
+<rect x="70" y="660" width="1860" height="140" fill="#ffffff" stroke="#cfcfcf" />
+
+
+<!-- contoh area masuk -->
+<rect x="70" y="840" width="420" height="120" fill="#e9f5ff" stroke="#b6dbff" />
+<text x="100" y="915" font-size="26" fill="#0b4b7a">AREA MASUK</text>
+</svg>
