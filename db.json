@@ -1,0 +1,62 @@
+{
+"company": {
+"name": "PT Granitoguna Building Ceramics",
+"project": "Warehouse Locator Gudang Sparepart"
+},
+"maps": [
+{
+"id": "gudang_sparepart",
+"name": "Gudang Sparepart - PT Granitoguna",
+"svg": "/maps/gudang-sparepart.svg"
+}
+],
+"racks": [
+{
+"id": "rack-A01",
+"mapId": "gudang_sparepart",
+"code": "A01",
+"x": 300,
+"y": 250
+},
+{
+"id": "rack-A12",
+"mapId": "gudang_sparepart",
+"code": "A12",
+"x": 520,
+"y": 410
+},
+{
+"id": "rack-B05",
+"mapId": "gudang_sparepart",
+"code": "B05",
+"x": 1200,
+"y": 650
+}
+],
+"items": [
+{
+"id": "item-0001",
+"sku": "SP-0001",
+"name": "Bearing 6203",
+"category": "Bearing",
+"defaultLocationId": "rack-A12",
+"qty": 50
+},
+{
+"id": "item-0002",
+"sku": "SP-0002",
+"name": "Filter Oli",
+"category": "Filter",
+"defaultLocationId": "rack-B05",
+"qty": 120
+},
+{
+"id": "item-0003",
+"sku": "SP-0003",
+"name": "Baut M10",
+"category": "Fastener",
+"defaultLocationId": "rack-A01",
+"qty": 1000
+}
+]
+}
